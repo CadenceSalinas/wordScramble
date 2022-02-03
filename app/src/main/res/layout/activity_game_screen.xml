@@ -8,10 +8,10 @@
     tools:context=".gameScreen">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/infoText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="Enter a word." />
 
     <EditText
         android:id="@+id/userWord"
@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Enter a word" />
+        android:text="" />
 
     <Button
         android:id="@+id/scramble"
@@ -38,4 +38,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView" />
+
 </LinearLayout>
