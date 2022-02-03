@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class gameScreen extends AppCompatActivity {
 
@@ -25,6 +26,8 @@ public class gameScreen extends AppCompatActivity {
                 EditText input = (EditText)findViewById(R.id.userWord);
                 String value = input.getText().toString();
                 Log.i("info", "" + value);
+                TextView result = (TextView)findViewById(R.id.result);
+                result.setText(value);
             }
         });
     }
