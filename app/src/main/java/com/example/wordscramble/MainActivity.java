@@ -25,14 +25,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v)
             {
                 Intent test = new Intent(MainActivity.this, gameScreen.class);
-
+                Log.i("info", "switch to game screen");
                 startActivity(test);
             }
         });
     }
 
-//    public void click(View v)
-//    {
-//        Log.i("info", "this is a test");
-//    }
 }
