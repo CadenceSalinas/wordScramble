@@ -24,9 +24,9 @@ public class MainActivity extends AppCompatActivity {
 
             public void onClick(View v)
             {
-                Intent test = new Intent(MainActivity.this, gameScreen.class);
-                Log.i("info", "switch to game screen");
-                startActivity(test);
+                Intent directory = new Intent(MainActivity.this, directoryPage.class);
+                Log.i("info", "switch to directory page");
+                startActivity(directory);
             }
         });
     }
