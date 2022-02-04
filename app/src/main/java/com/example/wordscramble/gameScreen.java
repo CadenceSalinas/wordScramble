@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.service.autofill.RegexValidator;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -26,9 +27,17 @@ public class gameScreen extends AppCompatActivity {
                 EditText input = (EditText)findViewById(R.id.userWord);
                 String value = input.getText().toString();
                 Log.i("info", "" + value);
+
                 TextView result = (TextView)findViewById(R.id.result);
-                result.setText(value);
+
+                Log.i("info", "" + validInput(value));
+                result.setText(validInput(value)+"");
             }
         });
+    }
+
+    public boolean validInput(String text)
+    {
+        return text.matches("[A-Za-z]*");
     }
 }
