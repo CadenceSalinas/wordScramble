@@ -20,6 +20,8 @@ public class directoryPage extends AppCompatActivity {
         setContentView(R.layout.activity_directory_page);
 
         unscramble = (Button)findViewById(R.id.wordUnscramble);
+        wordBegin = (Button)findViewById(R.id.wordBegin);
+        wordEnd = (Button)findViewById(R.id.wordEnd);
 
         unscramble.setOnClickListener(new View.OnClickListener() {
 
@@ -27,6 +29,16 @@ public class directoryPage extends AppCompatActivity {
             {
                 Intent directory = new Intent(directoryPage.this, gameScreen.class);
                 Log.i("info", "switch to directory page");
+                startActivity(directory);
+            }
+        });
+
+        wordBegin.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v)
+            {
+                Intent directory = new Intent(directoryPage.this, wordsBeginning.class);
+                Log.i("info", "switch to word begin page");
                 startActivity(directory);
             }
         });
