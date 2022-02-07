@@ -29,9 +29,9 @@ public class directoryPage extends AppCompatActivity {
 
             public void onClick(View v)
             {
-                Intent directory = new Intent(directoryPage.this, gameScreen.class);
+                Intent unscrambleGame = new Intent(directoryPage.this, gameScreen.class);
                 Log.i("info", "switch to game page");
-                startActivity(directory);
+                startActivity(unscrambleGame);
             }
         });
 
@@ -39,9 +39,9 @@ public class directoryPage extends AppCompatActivity {
 
             public void onClick(View v)
             {
-                Intent directory = new Intent(directoryPage.this, wordsBeginning.class);
+                Intent beginGame = new Intent(directoryPage.this, wordsBeginning.class);
                 Log.i("info", "switch to word begin page");
-                startActivity(directory);
+                startActivity(beginGame);
             }
         });
 
@@ -49,9 +49,9 @@ public class directoryPage extends AppCompatActivity {
 
             public void onClick(View v)
             {
-                Intent directory = new Intent(directoryPage.this, wordsEnding.class);
+                Intent endGame = new Intent(directoryPage.this, wordsEnding.class);
                 Log.i("info", "switch to word end page");
-                startActivity(directory);
+                startActivity(endGame);
             }
         });
 
@@ -59,9 +59,9 @@ public class directoryPage extends AppCompatActivity {
 
             public void onClick(View v)
             {
-                Intent directory = new Intent(directoryPage.this, MainActivity.class);
+                Intent home = new Intent(directoryPage.this, MainActivity.class);
                 Log.i("info", "switch to home page");
-                startActivity(directory);
+                startActivity(home);
             }
         });
     }

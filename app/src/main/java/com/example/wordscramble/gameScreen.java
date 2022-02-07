@@ -43,9 +43,9 @@ public class gameScreen extends AppCompatActivity {
 
             public void onClick(View v)
             {
-                Intent directory = new Intent(gameScreen.this, directoryPage.class);
+                Intent home = new Intent(gameScreen.this, directoryPage.class);
                 Log.i("info", "switch to directory page");
-                startActivity(directory);
+                startActivity(home);
             }
         });
     }
