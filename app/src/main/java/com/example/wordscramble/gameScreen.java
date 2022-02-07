@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 public class gameScreen extends AppCompatActivity {
 
+    Button userInput;
     Button back;
 
     @Override
@@ -20,11 +21,10 @@ public class gameScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_screen);
 
-
-        Button test = (Button)findViewById(R.id.scramble);
+        userInput = (Button)findViewById(R.id.scramble);
         back = (Button)findViewById(R.id.backButton4);
 
-        test.setOnClickListener(new View.OnClickListener() {
+        userInput.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v)
             {
