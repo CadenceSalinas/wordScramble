@@ -13,6 +13,7 @@ public class directoryPage extends AppCompatActivity {
     Button unscramble;
     Button wordBegin;
     Button wordEnd;
+    Button back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +23,7 @@ public class directoryPage extends AppCompatActivity {
         unscramble = (Button)findViewById(R.id.wordUnscramble);
         wordBegin = (Button)findViewById(R.id.wordBegin);
         wordEnd = (Button)findViewById(R.id.wordEnd);
+        back = (Button)findViewById(R.id.backButton);
 
         unscramble.setOnClickListener(new View.OnClickListener() {
 
@@ -49,6 +51,16 @@ public class directoryPage extends AppCompatActivity {
             {
                 Intent directory = new Intent(directoryPage.this, wordsEnding.class);
                 Log.i("info", "switch to word end page");
+                startActivity(directory);
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v)
+            {
+                Intent directory = new Intent(directoryPage.this, MainActivity.class);
+                Log.i("info", "switch to home page");
                 startActivity(directory);
             }
         });
