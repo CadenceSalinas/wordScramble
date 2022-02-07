@@ -42,5 +42,15 @@ public class directoryPage extends AppCompatActivity {
                 startActivity(directory);
             }
         });
+
+        wordEnd.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v)
+            {
+                Intent directory = new Intent(directoryPage.this, wordsEnding.class);
+                Log.i("info", "switch to word end page");
+                startActivity(directory);
+            }
+        });
     }
 }
