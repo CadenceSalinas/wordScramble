@@ -7,9 +7,29 @@
     android:orientation="vertical"
     tools:context=".wordsEnding">
 
+    <TextView
+        android:id="@+id/endingInstructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <EditText
+        android:id="@+id/endingInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textVisiblePassword" />
+
+    <Button
+        android:id="@+id/endingSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit" />
+
     <Button
         android:id="@+id/backButton3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Back" />
+
 </LinearLayout>
