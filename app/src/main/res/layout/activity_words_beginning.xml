@@ -7,6 +7,25 @@
     android:orientation="vertical"
     tools:context=".wordsBeginning">
 
+    <TextView
+        android:id="@+id/beginInstructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <EditText
+        android:id="@+id/beginInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textVisiblePassword" />
+
+    <Button
+        android:id="@+id/beginSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
     <Button
         android:id="@+id/backButton2"
         android:layout_width="match_parent"
