@@ -15,6 +15,8 @@ public class wordsEnding extends AppCompatActivity {
     Button userInput;
     Button back;
     String ending;
+    TextView setEnding;
+    TextView endingResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +25,7 @@ public class wordsEnding extends AppCompatActivity {
 
         //get ending
         ending = getIntent().getStringExtra("ending");
-        TextView setEnding =(TextView)findViewById(R.id.endingInstructions);
+        setEnding = (TextView)findViewById(R.id.endingInstructions);
         setEnding.setText("Make words that end with \"" + ending +"\"");
 
         userInput = (Button)findViewById(R.id.endingSubmit);
@@ -38,6 +40,12 @@ public class wordsEnding extends AppCompatActivity {
                 Log.i("info", "" + value);
 
                 Log.i("info", "" + validInput(value));
+                endingResult = (TextView)findViewById(R.id.endingResult);
+                if(validInput(value))
+                {
+                    String result = value + "\n";
+                    endingResult.setText(result);
+                }
             }
         });
 
