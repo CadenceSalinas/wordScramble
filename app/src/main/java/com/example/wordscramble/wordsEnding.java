@@ -14,11 +14,17 @@ public class wordsEnding extends AppCompatActivity {
 
     Button userInput;
     Button back;
+    String ending;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_words_ending);
+
+        //get ending
+        ending = getIntent().getStringExtra("ending");
+        TextView setEnding =(TextView)findViewById(R.id.endingInstructions);
+        setEnding.setText("Make words that end with \"" + ending +"\"");
 
         userInput = (Button)findViewById(R.id.endingSubmit);
         back = (Button)findViewById(R.id.backButton3);
@@ -48,6 +54,7 @@ public class wordsEnding extends AppCompatActivity {
 
     public boolean validInput(String text)
     {
-        return text.matches("[A-Za-z]*ing$");
+        ending = getIntent().getStringExtra("ending");
+        return text.matches("[A-Za-z]*" + ending + "$");
     }
 }

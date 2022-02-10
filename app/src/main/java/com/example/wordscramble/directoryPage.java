@@ -8,12 +8,15 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.Random;
+
 public class directoryPage extends AppCompatActivity {
 
     Button unscramble;
     Button wordBegin;
     Button wordEnd;
     Button back;
+    String endings[] = {"ing", "le", "t"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +54,10 @@ public class directoryPage extends AppCompatActivity {
             {
                 Intent endGame = new Intent(directoryPage.this, wordsEnding.class);
                 Log.i("info", "switch to word end page");
+                Random random = new Random();
+                int index = random.nextInt(endings.length);
+                String str = endings[index];
+                endGame.putExtra("ending", str);
                 startActivity(endGame);
             }
         });
