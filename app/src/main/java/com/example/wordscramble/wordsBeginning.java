@@ -47,6 +47,6 @@ public class wordsBeginning extends AppCompatActivity {
 
     public boolean validInput(String text)
     {
-        return text.matches("^b[A-Za-z]");
+        return text.matches("^b*[a-zA-z]*");
     }
 }
