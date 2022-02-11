@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class wordsEnding extends AppCompatActivity {
 
@@ -43,8 +44,11 @@ public class wordsEnding extends AppCompatActivity {
                 endingResult = (TextView)findViewById(R.id.endingResult);
                 if(validInput(value))
                 {
-                    String result = value + "\n";
-                    endingResult.setText(result);
+                    Toast.makeText(wordsEnding.this, "Correct!", Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    Toast.makeText(wordsEnding.this, "Incorrect, try again.", Toast.LENGTH_SHORT).show();
                 }
             }
         });

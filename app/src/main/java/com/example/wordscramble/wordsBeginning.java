@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class wordsBeginning extends AppCompatActivity {
 
@@ -39,6 +40,14 @@ public class wordsBeginning extends AppCompatActivity {
                 Log.i("info", "" + value);
 
                 Log.i("info", "" + validInput(value));
+                if(validInput(value))
+                {
+                    Toast.makeText(wordsBeginning.this, "Correct!", Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    Toast.makeText(wordsBeginning.this, "Incorrect, try again.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -56,6 +65,6 @@ public class wordsBeginning extends AppCompatActivity {
     public boolean validInput(String text)
     {
         beginning = getIntent().getStringExtra("begin");
-        return text.matches("^"+ beginning +"*[a-zA-z]*");
+        return text.matches("^"+ beginning +"[a-zA-z]*");
     }
 }
