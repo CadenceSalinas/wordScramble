@@ -17,6 +17,7 @@ public class directoryPage extends AppCompatActivity {
     Button wordEnd;
     Button back;
     String endings[] = {"ing", "le", "t"};
+    String beginnings[] = {"a", "r", "k"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +45,10 @@ public class directoryPage extends AppCompatActivity {
             {
                 Intent beginGame = new Intent(directoryPage.this, wordsBeginning.class);
                 Log.i("info", "switch to word begin page");
+                Random random = new Random();
+                int index = random.nextInt(beginnings.length);
+                String str = beginnings[index];
+                beginGame.putExtra("begin", str);
                 startActivity(beginGame);
             }
         });

@@ -8,16 +8,24 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class wordsBeginning extends AppCompatActivity {
 
     Button userInput;
     Button back;
+    String beginning;
+    TextView setBeginning;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_words_beginning);
+
+        //get beginning
+        beginning = getIntent().getStringExtra("begin");
+        setBeginning = (TextView)findViewById(R.id.beginInstructions);
+        setBeginning.setText("Make words that begin with \"" + beginning +"\"");
 
         userInput = (Button)findViewById(R.id.beginSubmit);
         back = (Button)findViewById(R.id.backButton2);
@@ -47,6 +55,7 @@ public class wordsBeginning extends AppCompatActivity {
 
     public boolean validInput(String text)
     {
-        return text.matches("^b*[a-zA-z]*");
+        beginning = getIntent().getStringExtra("begin");
+        return text.matches("^"+ beginning +"*[a-zA-z]*");
     }
 }

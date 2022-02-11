@@ -15,9 +15,6 @@ public class gameScreen extends AppCompatActivity {
 
     Button userInput;
     Button back;
-    char vowels[] = {'a', 'e', 'i', 'o', 'u'};
-    char consonants1[] = {};
-    char consonants2[];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
