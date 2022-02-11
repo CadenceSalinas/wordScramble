@@ -16,8 +16,8 @@ public class directoryPage extends AppCompatActivity {
     Button wordBegin;
     Button wordEnd;
     Button back;
-    String endings[] = {"ing", "le", "t"};
-    String beginnings[] = {"a", "r", "k"};
+    String endings[] = {"ing", "le", "t", "re", "l", "a", "s"};
+    String beginnings[] = {"a", "r", "k", "b", "br", "l", "o", "p"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
