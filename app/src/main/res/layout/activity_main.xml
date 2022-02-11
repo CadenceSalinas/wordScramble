@@ -10,9 +10,9 @@
     <TextView
         android:id="@+id/scrambleText"
         android:layout_width="match_parent"
-        android:layout_height="173dp"
+        android:layout_height="372dp"
         android:fontFamily="serif"
-        android:text="I have no idea what I'm doing"
+        android:text="Unscramble Game but you can only play words beginning and words ending"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="48sp"
