@@ -41,7 +41,6 @@ public class wordsEnding extends AppCompatActivity {
                 Log.i("info", "" + value);
 
                 Log.i("info", "" + validInput(value));
-                endingResult = (TextView)findViewById(R.id.endingResult);
                 if(validInput(value))
                 {
                     Toast.makeText(wordsEnding.this, "Correct!", Toast.LENGTH_SHORT).show();
